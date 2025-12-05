@@ -1,18 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATH Web Assignment</title>
-    <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ATH Innovations — Mini Web App</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="page">
 
-    <section class="hero">
-        <h1>Welcome to the Project Portal</h1>
-        <p>Submit your project details using our quick form.</p>
-        <a href="form.html" class="btn">Go to Form</a>
-    </section>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span class="brand-text">ATH Innovations</span>
+      </div>
 
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="form.html" class="nav-link">Submit Project</a>
+        <a href="display.html" class="nav-link">View Submission</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-inner">
+      <div class="hero-card glass">
+        <h1 class="hero-title">Build. Submit. Shine.</h1>
+        <p class="hero-lead">
+          A simple, elegant mini app to submit your project — thoughtfully designed with glassmorphism,
+          responsive layout, and delightful micro-interactions.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="form.html">Submit Your Project</a>
+          <a class="btn btn-ghost" href="display.html">View Last Submission</a>
+        </div>
+      </div>
+
+      <div class="hero-illus glass">
+        <!-- decorative illustration (pure CSS) -->
+        <div class="illus-spheres" aria-hidden="true">
+          <span class="s s1"></span>
+          <span class="s s2"></span>
+          <span class="s s3"></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <small>© <span id="year"></span> ATH Innovations · Web Developer Internship Assignment</small>
+    </div>
+  </footer>
+
+  <script>
+    // small footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
