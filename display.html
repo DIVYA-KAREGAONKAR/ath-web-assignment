@@ -1,31 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submitted Data</title>
-    <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ATH — Submission</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
+<body class="page">
 
-    <div class="container">
-        <h2>Your Submitted Details</h2>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span class="brand-text">ATH Innovations</span>
+      </div>
 
-        <div class="card">
-            <p><strong>Name:</strong> <span id="d-name"></span></p>
-            <p><strong>Email:</strong> <span id="d-email"></span></p>
-            <p><strong>Project Title:</strong> <span id="d-title"></span></p>
-            <p><strong>Description:</strong></p>
-            <p id="d-description"></p>
-        </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="form.html" class="nav-link">Form</a>
+        <a href="display.html" class="nav-link active">View</a>
+      </nav>
     </div>
+  </header>
 
-    <script>
-        document.getElementById("d-name").innerText = localStorage.getItem("name");
-        document.getElementById("d-email").innerText = localStorage.getItem("email");
-        document.getElementById("d-title").innerText = localStorage.getItem("title");
-        document.getElementById("d-description").innerText = localStorage.getItem("description");
-    </script>
+  <main class="container">
+    <section class="display-section">
+      <h2 class="section-title">Latest Submission</h2>
 
+      <div id="displayWrap" class="grid">
+        <!-- Filled by JS -->
+      </div>
+
+      <div class="display-actions">
+        <a href="form.html" class="btn btn-primary" id="editBtn">Edit Submission</a>
+        <button id="removeBtn" class="btn btn-danger">Clear Submission</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>

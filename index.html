@@ -9,9 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Main stylesheet -->
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="page">
+
+  <!-- Animated Gradient Background -->
+  <div class="bg-animated"></div>
 
   <header class="nav">
     <div class="nav-inner">
@@ -29,12 +32,19 @@
   </header>
 
   <main class="hero">
-    <div class="hero-inner">
+    <div class="hero-inner hero-centered">
+
+      <!-- FLOATING GLASS SHAPES -->
+      <div class="floating-shape shape1"></div>
+      <div class="floating-shape shape2"></div>
+
+      <!-- MAIN HERO CARD -->
       <div class="hero-card glass">
         <h1 class="hero-title">Build. Submit. Shine.</h1>
         <p class="hero-lead">
-          A simple, elegant mini app to submit your project — thoughtfully designed with glassmorphism,
-          responsive layout, and delightful micro-interactions.
+          A beautifully designed mini app to submit your project with a clean,
+          modern and world-class UI — featuring glassmorphism, smooth gradients,
+          and delightful micro-interactions.
         </p>
 
         <div class="hero-actions">
@@ -43,14 +53,6 @@
         </div>
       </div>
 
-      <div class="hero-illus glass">
-        <!-- decorative illustration (pure CSS) -->
-        <div class="illus-spheres" aria-hidden="true">
-          <span class="s s1"></span>
-          <span class="s s2"></span>
-          <span class="s s3"></span>
-        </div>
-      </div>
     </div>
   </main>
 
@@ -61,8 +63,9 @@
   </footer>
 
   <script>
-    // small footer year
+    // auto year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>

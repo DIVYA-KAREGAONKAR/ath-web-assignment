@@ -1,34 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Form</title>
-    <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ATH — Submit Project</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
+<body class="page">
 
-    <div class="container">
-        <h2>Submit Your Project</h2>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span class="brand-text">ATH Innovations</span>
+      </div>
 
-        <form id="projectForm">
-            <label>Full Name</label>
-            <input type="text" id="name" required>
-
-            <label>Email</label>
-            <input type="email" id="email" required>
-
-            <label>Project Title</label>
-            <input type="text" id="title" required>
-
-            <label>Project Description</label>
-            <textarea id="description" required></textarea>
-
-            <button type="submit" class="btn">Submit</button>
-        </form>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="form.html" class="nav-link active">Submit Project</a>
+        <a href="display.html" class="nav-link">View Submission</a>
+      </nav>
     </div>
+  </header>
 
-    <script src="assets/script.js"></script>
+  <main class="container">
+    <section class="form-section">
+      <div class="form-card glass">
+        <h2 class="form-title">Project Submission</h2>
+        <p class="form-sub">Fill the form below. All fields are required.</p>
+
+        <form id="projectForm" novalidate>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <input id="name" name="name" type="text" required autocomplete="name" />
+              <label for="name">Full Name</label>
+              <small class="error" data-for="name"></small>
+            </div>
+
+            <div class="form-group">
+              <input id="email" name="email" type="email" required autocomplete="email" />
+              <label for="email">Email</label>
+              <small class="error" data-for="email"></small>
+            </div>
+
+            <div class="form-group full">
+              <input id="title" name="title" type="text" required />
+              <label for="title">Project Title</label>
+              <small class="error" data-for="title"></small>
+            </div>
+
+            <div class="form-group full">
+              <textarea id="description" name="description" rows="5" required></textarea>
+              <label for="description">Project Description</label>
+              <small class="error" data-for="description"></small>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Project</button>
+            <button type="button" id="clearBtn" class="btn btn-ghost">Clear</button>
+          </div>
+
+          <div id="toast" class="toast" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
-
